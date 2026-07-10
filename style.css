@@ -13,3 +13,7 @@ text-align: center;
 img{
     width: 120px;
 }
+
+.conteiner{
+    display: flex;
+}
