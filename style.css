@@ -1,12 +1,12 @@
 header{
-background-color: rgb(20, 20, 195);
-color:rgba(107, 15, 193, 0.85);
+background-color: rgb(255, 0, 0);
+color:rgba(255, 255, 255, 0.85);
 text-align: center;
 }
 
 main{
-background-color:rgba(107, 15, 193, 0.85);
-color:rgb(20, 20, 195);
+background-color:rgba(255, 0, 0, 0.85);
+color:rgb(255, 255, 255);
 text-align: center;
 }
 
