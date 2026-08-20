@@ -1,229 +1,185 @@
-<!DOCTYPE html>
-<html lang="pt-br">
 
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AluraFlix - Meus Filmes</title>
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Rua 013 | Streetwear</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- CABEÇALHO -->
-    <header class="header">
-        <div class="header-container">
+    <header>
+        <div class="logo">RUA<span>013</span></div>
 
-            <h1 class="logo">
-                Alura<span>Flix</span>
-            </h1>
-
-            <p class="subtitle">
-                Meus filmes favoritos
-            </p>
-
-        </div>
+        <nav>
+            <a href="#inicio">Início</a>
+            <a href="#produtos">Produtos</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#contato">Contato</a>
+        </nav>
     </header>
 
 
-    <!-- CONTEÚDO -->
-    <main class="main-content">
+    <main>
 
-        <!-- DESTAQUE -->
-        <section class="hero-banner">
+        <section class="hero" id="inicio">
 
             <div class="hero-text">
+                <p class="mini-titulo">NOVA COLEÇÃO • 2026</p>
 
-                <span class="hero-label">FILME EM DESTAQUE</span>
-
-                <h2>Diário de uma Paixão</h2>
+                <h1>
+                    VISTA A<br>
+                    <span>SUA RUA.</span>
+                </h1>
 
                 <p>
-                    Em uma história de amor marcada pelo tempo, Noah e Allie
-                    se conhecem ainda jovens e vivem uma intensa paixão.
-                    Apesar das diferenças sociais e das dificuldades que
-                    aparecem no caminho, os dois tentam manter vivo o amor
-                    que sentem um pelo outro.
+                    Peças feitas para quem não gosta de seguir
+                    o mesmo caminho que todo mundo.
                 </p>
 
+                <a href="#produtos" class="botao">
+                    VER COLEÇÃO →
+                </a>
+            </div>
+
+            <div class="hero-desenho">
+                <div class="adesivo">STREET<br>ONLY</div>
+                <div class="numero">013</div>
             </div>
 
         </section>
 
 
-        <!-- CATÁLOGO -->
-        <section class="catalog">
+        <section class="produtos" id="produtos">
 
-            <h2 class="section-title">
-                Catálogo de Filmes
-            </h2>
+            <div class="titulo-secao">
+                <p>ESCOLHA SEU ESTILO</p>
+                <h2>DROP DA SEMANA</h2>
+            </div>
 
+            <div class="grade-produtos">
 
-            <div class="container-cards">
-
-
-                <!-- DIÁRIO DE UMA PAIXÃO -->
-                <article class="card">
-
-                    <div class="card-image-wrapper">
-
-                        <img src="diario.jpg"
-                            alt="Capa do filme Diário de uma Paixão">
-
+                <article class="produto">
+                    <div class="imagem-produto">
+                        <img src="imagens/camiseta.jpg" alt="Camiseta oversized preta">
+                        <span>NEW</span>
                     </div>
 
-                    <div class="card-content">
+                    <div class="info">
+                        <h3>Camiseta Oversized 013</h3>
+                        <p>Algodão premium • Preta</p>
 
-                        <h3>Diário de uma Paixão</h3>
-
-                        <p class="synopsis">
-                            Noah e Allie se apaixonam durante a juventude,
-                            mas são separados pelas diferenças sociais e
-                            pelas circunstâncias da vida. Anos depois,
-                            o destino faz com que eles se reencontrem,
-                            trazendo de volta sentimentos que nunca
-                            desapareceram completamente.
-                        </p>
-
-                        <a href="filmes/filme001.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-watch">
-                            Acesse o Filme
-                        </a>
-
+                        <div class="preco">
+                            <strong>R$ 89,90</strong>
+                            <button>COMPRAR</button>
+                        </div>
                     </div>
-
                 </article>
 
 
-
-                <!-- HOMEM-ARANHA -->
-                <article class="card">
-
-                    <div class="card-image-wrapper">
-
-                        <img src="imagem01.jpg"
-                            alt="Capa do filme Homem-Aranha: Um Novo Dia">
-
+                <article class="produto">
+                    <div class="imagem-produto">
+                        <img src="imagens/moletom.jpg" alt="Moletom streetwear">
                     </div>
 
-                    <div class="card-content">
+                    <div class="info">
+                        <h3>Moletom Underground</h3>
+                        <p>Moletom pesado • Edição limitada</p>
 
-                        <h3>Homem-Aranha: Um Novo Dia</h3>
-
-                        <p class="synopsis">
-                            Peter Parker continua sua vida como o Homem-Aranha,
-                            enfrentando novos desafios enquanto tenta equilibrar
-                            sua vida pessoal com a responsabilidade de proteger
-                            as pessoas de Nova York. Um novo capítulo começa
-                            para o herói.
-                        </p>
-
-                        <a href="filmes/filme002.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-watch">
-                            Acesse o Filme
-                        </a>
-
+                        <div class="preco">
+                            <strong>R$ 159,90</strong>
+                            <button>COMPRAR</button>
+                        </div>
                     </div>
-
                 </article>
 
 
-
-                <!-- MINIONS -->
-                <article class="card">
-
-                    <div class="card-image-wrapper">
-
-                        <img src="minions.jpg"
-                            alt="Capa do filme Minions & Monstros">
-
+                <article class="produto">
+                    <div class="imagem-produto">
+                        <img src="imagens/calca.jpg" alt="Calça cargo streetwear">
                     </div>
 
-                    <div class="card-content">
+                    <div class="info">
+                        <h3>Calça Cargo Baggy</h3>
+                        <p>Modelagem larga • Cinza</p>
 
-                        <h3>Minions & Monstros</h3>
-
-                        <p class="synopsis">
-                            Os Minions embarcam em uma nova aventura cheia
-                            de confusão e diversão. Desta vez, eles acabam
-                            envolvidos com criaturas misteriosas e precisam
-                            enfrentar situações inesperadas enquanto tentam
-                            completar mais uma de suas missões.
-                        </p>
-
-                        <a href="filmes/filme003.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-watch">
-                            Acesse o Filme
-                        </a>
-
+                        <div class="preco">
+                            <strong>R$ 139,90</strong>
+                            <button>COMPRAR</button>
+                        </div>
                     </div>
-
                 </article>
 
 
-
-                <!-- STAR WARS III -->
-                <article class="card">
-
-                    <div class="card-image-wrapper">
-
-                        <img src="star wars.jpg"
-                            alt="Capa do filme Star Wars Episódio III">
-
+                <article class="produto">
+                    <div class="imagem-produto">
+                        <img src="imagens/tenis.jpg" alt="Tênis streetwear">
+                        <span>DROP</span>
                     </div>
 
-                    <div class="card-content">
+                    <div class="info">
+                        <h3>Street Runner</h3>
+                        <p>Tênis casual • Preto e branco</p>
 
-                        <h3>Star Wars III: A Vingança dos Sith</h3>
-
-                        <p class="synopsis">
-                            As Guerras Clônicas chegam ao fim e Anakin Skywalker
-                            começa a ser atraído pelo lado sombrio da Força.
-                            Enquanto a República enfrenta uma grande ameaça,
-                            o conflito entre Jedi e Sith coloca a galáxia
-                            diante de uma transformação decisiva.
-                        </p>
-
-                        <a href="filmes/filme004.html"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="btn-watch">
-                            Acesse o Filme
-                        </a>
-
+                        <div class="preco">
+                            <strong>R$ 219,90</strong>
+                            <button>COMPRAR</button>
+                        </div>
                     </div>
-
                 </article>
-
 
             </div>
+        </section>
+
+
+        <section class="sobre" id="sobre">
+
+            <div>
+                <p class="mini-titulo">QUEM SOMOS</p>
+
+                <h2>
+                    NÃO É SÓ<br>
+                    ROUPA.
+                </h2>
+            </div>
+
+            <p>
+                A RUA013 nasceu da vontade de transformar o estilo
+                das ruas em algo único. Sem regras, sem copiar tendências
+                e sem tentar agradar todo mundo.
+                <br><br>
+                Cada peça representa um pouco da nossa identidade.
+            </p>
+
+        </section>
+
+
+        <section class="contato" id="contato">
+
+            <p class="mini-titulo">FALA COM A GENTE</p>
+
+            <h2>QUER FAZER<br>PARTE DO DROP?</h2>
+
+            <a href="#" class="botao">
+                CHAMAR NO INSTAGRAM →
+            </a>
 
         </section>
 
     </main>
 
 
-    <!-- RODAPÉ -->
-    <footer class="footer">
+    <footer>
+        <div class="logo">RUA<span>013</span></div>
 
-        <p>
-            &copy; 2026 AluraFlix - Todos os direitos reservados.
-        </p>
+        <p>Streetwear feito para a rua.</p>
 
+        <small>© 2026 RUA013 — Todos os direitos reservados.</small>
     </footer>
 
 </body>
-
 </html>
