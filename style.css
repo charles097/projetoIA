@@ -1,28 +1,16 @@
-/* ================================
-   ALURAFLIX - ESTILO PRINCIPAL
-================================ */
-
-/* --- Variáveis --- */
 :root {
     --bg-color: #080808;
-    --bg-secondary: #111111;
     --card-bg: #181818;
     --card-hover: #222222;
-
     --primary-color: #3b2cff;
     --primary-hover: #574aff;
-
     --text-color: #ffffff;
     --text-muted: #a7a7a7;
-
     --border-color: #292929;
-
     --font-family: 'Inter', sans-serif;
-
     --transition: all 0.3s ease;
 }
 
-/* --- Reset --- */
 * {
     margin: 0;
     padding: 0;
@@ -35,7 +23,11 @@ html {
 
 body {
     background:
-        radial-gradient(circle at top right, rgba(59, 44, 255, 0.12), transparent 30%),
+        radial-gradient(
+            circle at top right,
+            rgba(59, 44, 255, 0.12),
+            transparent 30%
+        ),
         var(--bg-color);
 
     color: var(--text-color);
@@ -48,15 +40,15 @@ body {
     flex-direction: column;
 }
 
-/* ================================
+
+/* =========================
    CABEÇALHO
-================================ */
+========================= */
 
 .header {
-    background: rgba(8, 8, 8, 0.92);
+    background: rgba(8, 8, 8, 0.95);
 
     backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
 
     position: sticky;
     top: 0;
@@ -71,20 +63,19 @@ body {
 .header-container {
     max-width: 1200px;
 
-    margin: 0 auto;
+    margin: auto;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 }
 
-/* Logo */
-
 .logo {
     font-size: 2rem;
-    font-weight: 700;
 
-    color: #ffffff;
+    font-weight: 700;
 
     letter-spacing: -1px;
 }
@@ -93,103 +84,81 @@ body {
     color: var(--primary-color);
 }
 
-/* Subtítulo */
-
 .subtitle {
     color: var(--text-muted);
 
     font-size: 0.9rem;
 }
 
-/* ================================
+
+/* =========================
    CONTEÚDO
-================================ */
+========================= */
 
 .main-content {
     width: 100%;
+
     max-width: 1200px;
 
-    margin: 0 auto;
+    margin: auto;
 
     padding: 2.5rem 1.5rem 4rem;
 
     flex: 1;
 }
 
-/* ================================
-   HERO
-================================ */
+
+/* =========================
+   DESTAQUE
+========================= */
 
 .hero-banner {
-    position: relative;
-
     min-height: 300px;
 
     display: flex;
+
     align-items: center;
 
     padding: 3rem;
 
     margin-bottom: 3.5rem;
 
-    overflow: hidden;
-
     border-radius: 16px;
+
+    border: 1px solid rgba(255,255,255,0.08);
 
     background:
         linear-gradient(
             90deg,
-            rgba(12, 12, 40, 0.98) 0%,
-            rgba(18, 18, 55, 0.92) 45%,
-            rgba(18, 18, 55, 0.25) 100%
+            #0c0c2e,
+            #15153d,
+            #101010
         );
 
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.5);
-
-    isolation: isolate;
-}
-
-/* Brilho decorativo */
-
-.hero-banner::before {
-    content: '';
-
-    position: absolute;
-
-    width: 350px;
-    height: 350px;
-
-    right: -100px;
-    top: -100px;
-
-    background: var(--primary-color);
-
-    opacity: 0.12;
-
-    filter: blur(80px);
-
-    border-radius: 50%;
-
-    z-index: -1;
+        0 20px 50px rgba(0,0,0,0.5);
 }
 
 .hero-text {
     max-width: 750px;
 }
 
-.hero-text h2 {
-    font-size: clamp(2rem, 5vw, 3.2rem);
+.hero-label {
+    color: #8178ff;
 
-    line-height: 1.1;
-
-    margin-bottom: 1rem;
+    font-size: 0.75rem;
 
     font-weight: 700;
 
-    letter-spacing: -1px;
+    letter-spacing: 2px;
+}
+
+.hero-text h2 {
+    font-size: 3rem;
+
+    line-height: 1.1;
+
+    margin: 0.7rem 0 1rem;
 }
 
 .hero-text p {
@@ -197,27 +166,22 @@ body {
 
     max-width: 700px;
 
-    font-size: 1rem;
-
     line-height: 1.8;
 }
 
-/* ================================
-   CATÁLOGO
-================================ */
 
-.catalog {
-    width: 100%;
-}
+/* =========================
+   TÍTULO
+========================= */
 
 .section-title {
     font-size: 1.7rem;
 
     margin-bottom: 1.5rem;
 
-    position: relative;
-
     padding-left: 1rem;
+
+    position: relative;
 }
 
 .section-title::before {
@@ -228,31 +192,26 @@ body {
     left: 0;
     top: 10%;
 
-    height: 80%;
     width: 4px;
+    height: 80%;
 
     background: var(--primary-color);
 
     border-radius: 10px;
-
-    box-shadow: 0 0 12px rgba(59, 44, 255, 0.6);
 }
 
-/* ================================
-   GRID DOS FILMES
-================================ */
+
+/* =========================
+   CARDS
+========================= */
 
 .container-cards {
     display: grid;
 
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-    gap: 1.5rem;
+    gap: 1.8rem;
 }
-
-/* ================================
-   CARD
-================================ */
 
 .card {
     background: var(--card-bg);
@@ -261,32 +220,30 @@ body {
 
     overflow: hidden;
 
-    display: flex;
-    flex-direction: column;
-
     border: 1px solid var(--border-color);
 
     transition: var(--transition);
 
-    box-shadow:
-        0 8px 20px rgba(0, 0, 0, 0.25);
+    display: flex;
+
+    flex-direction: column;
 }
 
 .card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-7px);
 
     background: var(--card-hover);
 
     border-color: rgba(87, 74, 255, 0.5);
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.5),
-        0 0 20px rgba(59, 44, 255, 0.12);
+        0 15px 35px rgba(0,0,0,0.5);
 }
 
-/* ================================
-   IMAGEM DOS FILMES
-================================ */
+
+/* =========================
+   CAPAS
+========================= */
 
 .card-image-wrapper {
     width: 100%;
@@ -296,28 +253,11 @@ body {
     overflow: hidden;
 
     background: #0d0d0d;
-
-    position: relative;
-}
-
-.card-image-wrapper::after {
-    content: '';
-
-    position: absolute;
-
-    inset: 0;
-
-    background: linear-gradient(
-        to top,
-        rgba(0, 0, 0, 0.25),
-        transparent 40%
-    );
-
-    pointer-events: none;
 }
 
 .card-image-wrapper img {
     width: 100%;
+
     height: 100%;
 
     display: block;
@@ -328,37 +268,46 @@ body {
 }
 
 .card:hover .card-image-wrapper img {
-    transform: scale(1.06);
+    transform: scale(1.04);
 }
 
-/* ================================
-   CONTEÚDO DO CARD
-================================ */
+
+/* =========================
+   INFORMAÇÕES
+========================= */
 
 .card-content {
-    padding: 1.1rem;
+    padding: 1.3rem;
 
     display: flex;
+
     flex-direction: column;
 
     flex: 1;
-
-    gap: 1rem;
 }
 
 .card-content h3 {
-    font-size: 1rem;
+    font-size: 1.15rem;
 
-    line-height: 1.4;
-
-    color: #ffffff;
-
-    font-weight: 600;
+    margin-bottom: 0.8rem;
 }
 
-/* ================================
+.synopsis {
+    color: var(--text-muted);
+
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+
+    margin-bottom: 1.2rem;
+
+    flex: 1;
+}
+
+
+/* =========================
    BOTÃO
-================================ */
+========================= */
 
 .btn-watch {
     display: block;
@@ -373,24 +322,19 @@ body {
         #5548ff
     );
 
-    color: #ffffff;
+    color: white;
 
     text-decoration: none;
 
-    padding: 0.7rem 1rem;
+    padding: 0.75rem;
 
     border-radius: 7px;
 
+    font-size: 0.9rem;
+
     font-weight: 600;
 
-    font-size: 0.88rem;
-
     transition: var(--transition);
-
-    border: 1px solid rgba(255, 255, 255, 0.08);
-
-    box-shadow:
-        0 5px 15px rgba(59, 44, 255, 0.2);
 }
 
 .btn-watch:hover {
@@ -403,16 +347,13 @@ body {
     transform: translateY(-2px);
 
     box-shadow:
-        0 7px 20px rgba(59, 44, 255, 0.4);
+        0 7px 20px rgba(59,44,255,0.4);
 }
 
-.btn-watch:active {
-    transform: scale(0.98);
-}
 
-/* ================================
+/* =========================
    RODAPÉ
-================================ */
+========================= */
 
 .footer {
     text-align: center;
@@ -426,28 +367,28 @@ body {
     font-size: 0.8rem;
 
     border-top: 1px solid var(--border-color);
-
-    margin-top: auto;
 }
 
-/* ================================
-   TABLETS
-================================ */
 
-@media (max-width: 1000px) {
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
 
     .container-cards {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
-    .hero-banner {
-        min-height: 280px;
+    .hero-text h2 {
+        font-size: 2.3rem;
     }
 }
 
-/* ================================
-   CELULARES
-================================ */
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 600px) {
 
@@ -463,26 +404,14 @@ body {
         gap: 0.2rem;
     }
 
-    .logo {
-        font-size: 1.7rem;
-    }
-
-    .subtitle {
-        font-size: 0.8rem;
-    }
-
     .main-content {
         padding: 1.5rem 1rem 3rem;
     }
 
     .hero-banner {
-        min-height: auto;
-
         padding: 2rem 1.5rem;
 
-        margin-bottom: 2.5rem;
-
-        border-radius: 12px;
+        min-height: auto;
     }
 
     .hero-text h2 {
@@ -491,31 +420,9 @@ body {
 
     .hero-text p {
         font-size: 0.9rem;
-
-        line-height: 1.7;
     }
 
-    .section-title {
-        font-size: 1.4rem;
+    .card-image-wrapper {
+        aspect-ratio: 2 / 3;
     }
-
-    .container-cards {
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 1rem;
-    }
-
-    .card-content {
-        padding: 0.9rem;
-
-        gap: 0.8rem;
-    }
-
-    .card-content h3 {
-        font-size: 0.9rem;
-    }
-
-    .btn-watch {
-        padding: 0.6rem 0.5rem;
-
-        font-size: 0.
+}
