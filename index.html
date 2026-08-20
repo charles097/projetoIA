@@ -4,113 +4,226 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AluraFlix - Seus Filmes Favoritos</title>
+
+    <title>AluraFlix - Meus Filmes</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+    <!-- CABEÇALHO -->
     <header class="header">
         <div class="header-container">
-            <h1 class="logo">Alura<span>Flix</span></h1>
-            <p class="subtitle">Meu site para filmes</p>
+
+            <h1 class="logo">
+                Alura<span>Flix</span>
+            </h1>
+
+            <p class="subtitle">
+                Meus filmes favoritos
+            </p>
+
         </div>
     </header>
 
+
+    <!-- CONTEÚDO -->
     <main class="main-content">
 
-        <!-- Seção Hero / Destaque principal -->
+        <!-- DESTAQUE -->
         <section class="hero-banner">
+
             <div class="hero-text">
-                <h2>Homem-Aranha: Um Novo Dia</h2>
+
+                <span class="hero-label">FILME EM DESTAQUE</span>
+
+                <h2>Diário de uma Paixão</h2>
+
                 <p>
-                    Peter Parker continua sua jornada como Homem-Aranha,
-                    enfrentando novos desafios enquanto tenta equilibrar sua
-                    vida pessoal com a responsabilidade de proteger Nova York.
-                    Um novo capítulo começa para o herói.
+                    Em uma história de amor marcada pelo tempo, Noah e Allie
+                    se conhecem ainda jovens e vivem uma intensa paixão.
+                    Apesar das diferenças sociais e das dificuldades que
+                    aparecem no caminho, os dois tentam manter vivo o amor
+                    que sentem um pelo outro.
                 </p>
+
             </div>
+
         </section>
 
-        <!-- Galeria de Filmes -->
+
+        <!-- CATÁLOGO -->
         <section class="catalog">
-            <h3 class="section-title">Catálogo de Filmes</h3>
+
+            <h2 class="section-title">
+                Catálogo de Filmes
+            </h2>
+
 
             <div class="container-cards">
 
+
+                <!-- DIÁRIO DE UMA PAIXÃO -->
                 <article class="card">
+
                     <div class="card-image-wrapper">
-                        <img src="https://image.tmdb.org/t/p/original/placeholder.jpg"
+
+                        <img src="diario.jpg"
+                            alt="Capa do filme Diário de uma Paixão">
+
+                    </div>
+
+                    <div class="card-content">
+
+                        <h3>Diário de uma Paixão</h3>
+
+                        <p class="synopsis">
+                            Noah e Allie se apaixonam durante a juventude,
+                            mas são separados pelas diferenças sociais e
+                            pelas circunstâncias da vida. Anos depois,
+                            o destino faz com que eles se reencontrem,
+                            trazendo de volta sentimentos que nunca
+                            desapareceram completamente.
+                        </p>
+
+                        <a href="filmes/filme001.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="btn-watch">
+                            Acesse o Filme
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- HOMEM-ARANHA -->
+                <article class="card">
+
+                    <div class="card-image-wrapper">
+
+                        <img src="imagem01.jpg"
                             alt="Capa do filme Homem-Aranha: Um Novo Dia">
+
                     </div>
 
                     <div class="card-content">
+
                         <h3>Homem-Aranha: Um Novo Dia</h3>
-                        <a href="filmes/filme001.html" target="_blank" rel="noopener noreferrer"
+
+                        <p class="synopsis">
+                            Peter Parker continua sua vida como o Homem-Aranha,
+                            enfrentando novos desafios enquanto tenta equilibrar
+                            sua vida pessoal com a responsabilidade de proteger
+                            as pessoas de Nova York. Um novo capítulo começa
+                            para o herói.
+                        </p>
+
+                        <a href="filmes/filme002.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-watch">
                             Acesse o Filme
                         </a>
+
                     </div>
+
                 </article>
 
 
+
+                <!-- MINIONS -->
                 <article class="card">
+
                     <div class="card-image-wrapper">
-                        <img src="https://image.tmdb.org/t/p/original/placeholder.jpg"
+
+                        <img src="minions.jpg"
                             alt="Capa do filme Minions & Monstros">
+
                     </div>
 
                     <div class="card-content">
+
                         <h3>Minions & Monstros</h3>
-                        <a href="filmes/filme002.html" target="_blank" rel="noopener noreferrer"
+
+                        <p class="synopsis">
+                            Os Minions embarcam em uma nova aventura cheia
+                            de confusão e diversão. Desta vez, eles acabam
+                            envolvidos com criaturas misteriosas e precisam
+                            enfrentar situações inesperadas enquanto tentam
+                            completar mais uma de suas missões.
+                        </p>
+
+                        <a href="filmes/filme003.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-watch">
                             Acesse o Filme
                         </a>
+
                     </div>
+
                 </article>
 
 
+
+                <!-- STAR WARS III -->
                 <article class="card">
+
                     <div class="card-image-wrapper">
-                        <img src="https://image.tmdb.org/t/p/original/placeholder.jpg"
-                            alt="Capa do filme Star Wars">
+
+                        <img src="star wars.jpg"
+                            alt="Capa do filme Star Wars Episódio III">
+
                     </div>
 
                     <div class="card-content">
-                        <h3>Star Wars: O Despertar da Força</h3>
-                        <a href="filmes/filme003.html" target="_blank" rel="noopener noreferrer"
+
+                        <h3>Star Wars III: A Vingança dos Sith</h3>
+
+                        <p class="synopsis">
+                            As Guerras Clônicas chegam ao fim e Anakin Skywalker
+                            começa a ser atraído pelo lado sombrio da Força.
+                            Enquanto a República enfrenta uma grande ameaça,
+                            o conflito entre Jedi e Sith coloca a galáxia
+                            diante de uma transformação decisiva.
+                        </p>
+
+                        <a href="filmes/filme004.html"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             class="btn-watch">
                             Acesse o Filme
                         </a>
+
                     </div>
+
                 </article>
 
-
-                <article class="card">
-                    <div class="card-image-wrapper">
-                        <img src="https://image.tmdb.org/t/p/original/placeholder.jpg"
-                            alt="Capa do filme Deadpool 2">
-                    </div>
-
-                    <div class="card-content">
-                        <h3>Deadpool 2</h3>
-                        <a href="filmes/filme004.html" target="_blank" rel="noopener noreferrer"
-                            class="btn-watch">
-                            Acesse o Filme
-                        </a>
-                    </div>
-                </article>
 
             </div>
+
         </section>
+
     </main>
 
+
+    <!-- RODAPÉ -->
     <footer class="footer">
-        <p>&copy; 2026 AluraFlix - Todos os direitos reservados.</p>
+
+        <p>
+            &copy; 2026 AluraFlix - Todos os direitos reservados.
+        </p>
+
     </footer>
+
 </body>
 
 </html>
