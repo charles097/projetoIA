@@ -1,14 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
 
-:root {
-    --preto: #080908;
-    --preto-2: #111311;
-    --verde: #b6ff00;
-    --verde-escuro: #79b800;
-    --branco: #f1f1ed;
-    --cinza: #9b9b96;
-    --borda: #272a27;
-}
 
 * {
     margin: 0;
@@ -16,561 +7,860 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
-    background: var(--preto);
-    color: var(--branco);
+    background: #080908;
+    color: #f2f2f2;
     font-family: 'Inter', sans-serif;
 }
 
-a {
-    color: inherit;
-}
 
-
-/* ================= HEADER ================= */
+/* =========================
+   HEADER
+========================= */
 
 header {
     height: 82px;
     padding: 0 7%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid var(--borda);
+
+    background: #080908;
+
+    border-bottom: 1px solid #252a25;
+
     position: sticky;
     top: 0;
     z-index: 100;
-    background: rgba(8, 9, 8, .94);
-    backdrop-filter: blur(12px);
 }
+
 
 .marca {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
+
     text-decoration: none;
+    color: white;
+}
+
+
+/* =========================
+   LOGO URSO
+========================= */
+
+.logo-urso {
+    width: 46px;
+    height: 42px;
+
+    background: #101410;
+
+    border: 2px solid #b6ff00;
+
+    border-radius: 45% 45% 40% 40%;
+
+    position: relative;
+
+    transform: rotate(-2deg);
+
+    box-shadow: 3px 3px 0 #b6ff00;
+}
+
+
+/* ORELHAS */
+
+.logo-urso::before,
+.logo-urso::after {
+    content: "";
+
+    position: absolute;
+
+    width: 15px;
+    height: 15px;
+
+    background: #101410;
+
+    border: 2px solid #b6ff00;
+
+    border-radius: 50%;
+
+    top: -8px;
+}
+
+
+.logo-urso::before {
+    left: -5px;
+}
+
+
+.logo-urso::after {
+    right: -5px;
+}
+
+
+/* OLHOS */
+
+.olho {
+    position: absolute;
+
+    width: 6px;
+    height: 9px;
+
+    background: #b6ff00;
+
+    top: 14px;
+
+    transform: rotate(-20deg);
+}
+
+
+.olho1 {
+    left: 11px;
+}
+
+
+.olho2 {
+    right: 11px;
+    transform: rotate(20deg);
+}
+
+
+/* BOCA */
+
+.boca {
+    position: absolute;
+
+    width: 24px;
+    height: 8px;
+
+    border-bottom: 3px solid #b6ff00;
+
+    left: 9px;
+    bottom: 9px;
+
+    transform: rotate(-4deg);
+}
+
+
+.logo-texto {
     font-family: 'Anton', sans-serif;
+
     font-size: 25px;
+
     letter-spacing: 1px;
 }
 
-.marca strong {
-    color: var(--verde);
+
+.logo-texto span {
+    color: #b6ff00;
 }
 
-.logo-urso {
-    width: 42px;
-    height: 42px;
-    color: var(--verde);
-}
+
+/* =========================
+   MENU
+========================= */
 
 nav {
     display: flex;
-    gap: 35px;
+    gap: 30px;
 }
 
+
 nav a {
+    color: #ddd;
+
     text-decoration: none;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 1px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+
     transition: .2s;
 }
 
+
 nav a:hover {
-    color: var(--verde);
+    color: #b6ff00;
 }
 
 
-/* ================= HERO ================= */
+/* =========================
+   HERO
+========================= */
 
 .hero {
-    min-height: 720px;
+    min-height: 650px;
+
     padding: 90px 8%;
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    justify-content: space-between;
+
     gap: 70px;
-    overflow: hidden;
+
     background:
-        radial-gradient(circle at 80% 45%, rgba(182,255,0,.09), transparent 25%);
+        radial-gradient(
+            circle at 80% 40%,
+            rgba(182,255,0,.10),
+            transparent 30%
+        );
 }
+
 
 .hero-text {
     max-width: 650px;
 }
 
+
 .mini-titulo {
-    color: var(--verde);
+    color: #b6ff00;
+
     font-size: 11px;
-    font-weight: 900;
+
+    font-weight: 800;
+
     letter-spacing: 4px;
+
     margin-bottom: 18px;
 }
 
+
 .hero h1 {
     font-family: 'Anton', sans-serif;
-    font-size: clamp(80px, 12vw, 170px);
-    line-height: .78;
-    letter-spacing: -5px;
+
+    font-size: clamp(75px, 11vw, 155px);
+
+    line-height: .8;
+
+    letter-spacing: -3px;
 }
+
 
 .hero h1 span {
     color: transparent;
-    -webkit-text-stroke: 2px var(--branco);
+
+    -webkit-text-stroke: 2px #b6ff00;
 }
 
-.descricao {
+
+.hero-text > p:not(.mini-titulo) {
     max-width: 450px;
-    margin: 40px 0;
+
+    margin: 35px 0;
+
     color: #aaa;
+
     line-height: 1.7;
-    font-size: 14px;
+
+    font-size: 15px;
 }
 
-.hero-botoes {
-    display: flex;
-    gap: 12px;
-}
 
-.botao,
-.botao-outline,
-.instagram {
+/* =========================
+   BOTÕES
+========================= */
+
+.botao {
     display: inline-block;
+
+    padding: 16px 25px;
+
+    background: #b6ff00;
+
+    color: #080908;
+
+    border: 2px solid #b6ff00;
+
     text-decoration: none;
-    padding: 16px 24px;
+
     font-size: 11px;
+
     font-weight: 900;
-    letter-spacing: 1px;
+
     transition: .2s;
 }
 
-.botao {
-    background: var(--verde);
-    color: var(--preto);
-    border: 2px solid var(--verde);
-}
 
 .botao:hover {
-    background: var(--branco);
-    border-color: var(--branco);
-}
+    background: transparent;
 
-.botao-outline {
-    border: 2px solid #555;
-    color: var(--branco);
-}
+    color: #b6ff00;
 
-.botao-outline:hover {
-    border-color: var(--verde);
-    color: var(--verde);
+    transform: translateY(-3px);
 }
 
 
-/* ================= LOGO HERO ================= */
+/* =========================
+   DESENHO HERO
+========================= */
 
-.hero-logo {
-    width: 390px;
-    height: 390px;
-    min-width: 390px;
-    border: 2px solid var(--verde);
+.hero-desenho {
+    width: 360px;
+    height: 360px;
+
+    min-width: 360px;
+
+    background: #b6ff00;
+
+    border: 3px solid #080908;
+
     position: relative;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
-    transform: rotate(4deg);
-    background: var(--preto-2);
-    box-shadow: 18px 18px 0 var(--verde);
+
+    transform: rotate(5deg);
+
+    box-shadow: 16px 16px 0 #252a25;
 }
 
-.urso-grande {
-    width: 250px;
-    height: 250px;
-    color: var(--verde);
-}
 
-.glitch {
-    position: absolute;
+.numero {
     font-family: 'Anton', sans-serif;
-    font-size: 110px;
-    color: transparent;
-    -webkit-text-stroke: 1px #333;
-    top: 5px;
-    left: 20px;
+
+    font-size: 180px;
+
+    color: #080908;
+
+    transform: rotate(-5deg);
 }
 
-.selo {
+
+.adesivo {
     position: absolute;
-    right: -35px;
-    bottom: 25px;
-    background: var(--verde);
-    color: var(--preto);
-    padding: 12px;
+
+    right: -45px;
+    top: 25px;
+
+    padding: 10px;
+
+    background: #080908;
+
+    color: #b6ff00;
+
+    border: 2px solid #b6ff00;
+
     font-size: 11px;
+
     font-weight: 900;
-    transform: rotate(-8deg);
+
+    transform: rotate(10deg);
 }
 
 
-/* ================= PRODUTOS ================= */
+.rabisco {
+    position: absolute;
+
+    bottom: 15px;
+    left: 20px;
+
+    font-family: 'Anton', sans-serif;
+
+    font-size: 55px;
+
+    color: #080908;
+
+    transform: rotate(-15deg);
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
 
 .produtos {
-    padding: 110px 8%;
-    border-top: 1px solid var(--borda);
+    padding: 100px 8%;
+
+    border-top: 1px solid #252a25;
+
+    background: #0c0f0c;
 }
+
 
 .titulo-secao {
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
 
+
 .titulo-secao p {
-    color: var(--verde);
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 3px;
+    color: #b6ff00;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 4px;
 }
+
 
 .titulo-secao h2 {
     font-family: 'Anton', sans-serif;
-    font-size: 65px;
-    line-height: .9;
-    margin-top: 10px;
-}
 
-.contador {
-    border: 1px solid #444;
-    padding: 10px 15px;
-    color: #888;
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 60px;
+
+    margin-top: 7px;
 }
 
 
-/* ================= GRID ================= */
+/* =========================
+   GRID
+========================= */
 
 .grade-produtos {
     display: grid;
+
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+
+    gap: 22px;
 }
 
+
+/* =========================
+   PRODUTO
+========================= */
+
 .produto {
-    background: var(--preto-2);
-    border: 1px solid var(--borda);
-    transition: .3s;
+    background: #111411;
+
+    border: 1px solid #303630;
+
+    overflow: hidden;
+
+    transition: .25s;
 }
+
 
 .produto:hover {
     transform: translateY(-8px);
-    border-color: var(--verde);
-    box-shadow: 7px 7px 0 var(--verde);
+
+    border-color: #b6ff00;
+
+    box-shadow: 7px 7px 0 #b6ff00;
 }
 
+
+/* =========================
+   IMAGEM
+========================= */
+
 .imagem-produto {
-    height: 340px;
+    width: 100%;
+
+    height: 330px;
+
+    background: #191d19;
+
     position: relative;
+
     overflow: hidden;
-    background: #171917;
-    border-bottom: 1px solid var(--borda);
+
+    border-bottom: 1px solid #303630;
 }
+
 
 .imagem-produto img {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     display: block;
+
     transition: .4s;
-    filter: saturate(.8);
 }
 
+
 .produto:hover img {
-    transform: scale(1.06);
+    transform: scale(1.07);
 }
+
 
 .imagem-produto span {
     position: absolute;
+
     top: 12px;
     left: 12px;
-    background: var(--verde);
-    color: var(--preto);
+
+    background: #b6ff00;
+
+    color: #080908;
+
     padding: 7px 10px;
+
     font-size: 9px;
+
     font-weight: 900;
 }
+
+
+/* =========================
+   INFO
+========================= */
 
 .info {
     padding: 20px;
 }
 
-.categoria {
-    color: var(--verde) !important;
-    font-size: 9px !important;
-    font-weight: 900;
-    letter-spacing: 1px;
-    margin-bottom: 10px;
-}
 
 .info h3 {
-    font-size: 16px;
-    margin-bottom: 7px;
+    font-size: 17px;
+
+    margin-bottom: 8px;
 }
 
-.info > p:not(.categoria) {
-    color: var(--cinza);
-    font-size: 11px;
+
+.info p {
+    color: #858985;
+
+    font-size: 12px;
 }
+
+
+/* =========================
+   PREÇO
+========================= */
 
 .preco {
     margin-top: 25px;
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    justify-content: space-between;
 }
+
 
 .preco strong {
-    font-size: 16px;
+    color: #fff;
+
+    font-size: 17px;
 }
 
+
 .comprar {
+    display: inline-block;
+
+    padding: 9px 13px;
+
+    background: #b6ff00;
+
+    color: #080908;
+
     text-decoration: none;
-    background: var(--verde);
-    color: var(--preto);
-    padding: 10px 12px;
-    font-size: 9px;
+
+    font-size: 10px;
+
     font-weight: 900;
+
     transition: .2s;
 }
 
+
 .comprar:hover {
-    background: var(--branco);
+    background: white;
+
+    transform: scale(1.05);
 }
 
 
-/* ================= SOBRE ================= */
+/* =========================
+   SOBRE
+========================= */
 
 .sobre {
-    padding: 120px 8%;
-    background: var(--branco);
-    color: var(--preto);
+    padding: 110px 8%;
+
+    background: #080908;
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
+
     gap: 100px;
+
     align-items: center;
 }
 
-.sobre .mini-titulo {
-    color: #5c8c00;
-}
 
 .sobre h2,
 .contato h2 {
     font-family: 'Anton', sans-serif;
-    font-size: 95px;
-    line-height: .82;
-    letter-spacing: -2px;
+
+    font-size: 90px;
+
+    line-height: .85;
 }
 
-.sobre-texto {
-    max-width: 520px;
-}
 
-.sobre-texto p {
-    color: #555;
+.sobre > p {
+    max-width: 500px;
+
+    color: #aaa;
+
+    font-size: 16px;
+
     line-height: 1.8;
-    margin-bottom: 25px;
-    font-size: 15px;
-}
-
-.sobre-texto strong {
-    font-size: 12px;
-    letter-spacing: 2px;
 }
 
 
-/* ================= CONTATO ================= */
+/* =========================
+   CONTATO
+========================= */
 
 .contato {
-    padding: 120px 8%;
-    background: var(--verde);
-    color: var(--preto);
+    padding: 110px 8%;
+
+    background: #b6ff00;
+
+    color: #080908;
+
     text-align: center;
 }
 
+
 .contato .mini-titulo {
-    color: var(--preto);
+    color: #080908;
 }
+
 
 .contato h2 {
-    margin-bottom: 35px;
-}
-
-.contato p:not(.mini-titulo) {
-    max-width: 400px;
-    margin: 0 auto 35px;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.instagram {
-    background: var(--preto);
-    color: white;
-}
-
-.instagram:hover {
-    background: white;
-    color: var(--preto);
+    margin-bottom: 45px;
 }
 
 
-/* ================= FOOTER ================= */
+.botao-instagram {
+    background: #080908;
+
+    color: #b6ff00;
+
+    border-color: #080908;
+}
+
+
+.botao-instagram:hover {
+    background: transparent;
+
+    color: #080908;
+
+    border-color: #080908;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
 
 footer {
-    padding: 45px 8%;
-    border-top: 1px solid var(--borda);
+    padding: 50px 8%;
+
+    background: #050605;
+
+    border-top: 1px solid #252a25;
+
     display: flex;
-    justify-content: space-between;
+
     align-items: center;
+
+    justify-content: space-between;
+
     gap: 20px;
 }
 
-.footer-marca {
+
+.marca-footer {
     display: flex;
+
     align-items: center;
-    gap: 12px;
+
+    gap: 10px;
 }
 
-.footer-marca strong {
-    font-family: 'Anton', sans-serif;
-    font-size: 22px;
-}
-
-.footer-marca p {
-    color: #777;
-    font-size: 10px;
-    margin-top: 3px;
-}
 
 .logo-urso.pequeno {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 35px;
+
+    box-shadow: none;
 }
+
+
+footer p {
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+footer a {
+    color: #b6ff00;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    font-size: 12px;
+}
+
 
 footer small {
-    color: #666;
-    font-size: 9px;
+    color: #555;
+
+    font-size: 10px;
 }
 
 
-/* ================= CELULAR ================= */
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1000px) {
-
-    .hero {
-        padding: 80px 6%;
-    }
-
-    .hero-logo {
-        width: 300px;
-        height: 300px;
-        min-width: 300px;
-    }
-
-    .urso-grande {
-        width: 190px;
-        height: 190px;
-    }
 
     .grade-produtos {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .hero {
+        padding: 70px 6%;
+    }
+
+    .hero-desenho {
+        width: 280px;
+        height: 280px;
+        min-width: 280px;
+    }
+
+    .numero {
+        font-size: 140px;
+    }
+
 }
 
+
+/* =========================
+   CELULAR
+========================= */
 
 @media (max-width: 650px) {
 
     header {
         height: auto;
-        padding: 17px 20px;
+
+        padding: 18px 20px;
+
         flex-direction: column;
+
         gap: 18px;
     }
 
+
     nav {
         width: 100%;
+
         justify-content: space-between;
+
         gap: 8px;
     }
+
 
     nav a {
         font-size: 9px;
     }
 
+
     .hero {
+        min-height: auto;
+
         padding: 70px 25px;
+
         flex-direction: column;
+
         align-items: flex-start;
+
+        gap: 70px;
     }
+
 
     .hero h1 {
-        font-size: 82px;
+        font-size: 76px;
     }
 
-    .hero-logo {
+
+    .hero-desenho {
         align-self: center;
-        width: 250px;
-        height: 250px;
-        min-width: 250px;
+
+        width: 230px;
+        height: 230px;
+
+        min-width: 230px;
     }
 
-    .urso-grande {
-        width: 170px;
-        height: 170px;
+
+    .numero {
+        font-size: 110px;
     }
 
-    .glitch {
-        font-size: 70px;
-    }
 
     .produtos {
-        padding: 75px 25px;
+        padding: 70px 25px;
     }
 
+
     .titulo-secao h2 {
-        font-size: 48px;
+        font-size: 45px;
     }
+
 
     .grade-produtos {
         grid-template-columns: 1fr;
     }
 
+
     .imagem-produto {
-        height: 390px;
+        height: 380px;
     }
 
+
     .sobre {
-        padding: 80px 25px;
+        padding: 70px 25px;
+
         grid-template-columns: 1fr;
-        gap: 50px;
+
+        gap: 45px;
     }
+
 
     .sobre h2,
     .contato h2 {
-        font-size: 68px;
+        font-size: 65px;
     }
 
+
     .contato {
-        padding: 85px 25px;
+        padding: 80px 25px;
     }
+
 
     footer {
         padding: 40px 25px;
+
         flex-direction: column;
+
         text-align: center;
     }
+
 }
