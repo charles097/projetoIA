@@ -629,3 +629,364 @@
 </body>
 
 </html>
+
+<!-- =========================
+     CHECKOUT
+========================= -->
+
+<section class="checkout" id="checkout">
+
+    <div class="checkout-top">
+
+        <a href="#produtos" class="voltar">
+            ← VOLTAR PARA OS PRODUTOS
+        </a>
+
+        <p class="mini-titulo">
+            ZOOMBIES 077 • CHECKOUT
+        </p>
+
+        <h1>
+            FINALIZE<br>
+            <span>SUA COMPRA.</span>
+        </h1>
+
+        <p>
+            Esta é apenas uma simulação de compra.
+        </p>
+
+    </div>
+
+
+    <form
+        class="formulario"
+        onsubmit="finalizarCompra(event)">
+
+
+        <!-- PRODUTO -->
+
+        <section class="box-checkout">
+
+            <h2>
+                01 — SEU PRODUTO
+            </h2>
+
+            <div class="produto-escolhido">
+
+                <div>
+
+                    <strong id="produtoEscolhido">
+                        Produto
+                    </strong>
+
+                    <p>
+                        ZOOMBIES 077
+                    </p>
+
+                </div>
+
+                <strong id="precoEscolhido">
+                    R$ 0,00
+                </strong>
+
+            </div>
+
+        </section>
+
+
+        <!-- DADOS -->
+
+        <section class="box-checkout">
+
+            <h2>
+                02 — SEUS DADOS
+            </h2>
+
+            <div class="campo">
+
+                <label>
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Digite seu nome"
+                    required>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    placeholder="seuemail@email.com"
+                    required>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Telefone
+                </label>
+
+                <input
+                    type="tel"
+                    placeholder="(00) 00000-0000"
+                    required>
+
+            </div>
+
+        </section>
+
+
+        <!-- ENDEREÇO -->
+
+        <section class="box-checkout">
+
+            <h2>
+                03 — ENDEREÇO DE ENTREGA
+            </h2>
+
+
+            <div class="campo">
+
+                <label>
+                    CEP
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="00000-000"
+                    required>
+
+            </div>
+
+
+            <div class="campo">
+
+                <label>
+                    Endereço
+                </label>
+
+                <input
+                    type="text"
+                    placeholder="Rua, avenida..."
+                    required>
+
+            </div>
+
+
+            <div class="duas-colunas">
+
+                <div class="campo">
+
+                    <label>
+                        Número
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="123"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Complemento
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Opcional">
+
+                </div>
+
+            </div>
+
+
+            <div class="duas-colunas">
+
+                <div class="campo">
+
+                    <label>
+                        Cidade
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="Sua cidade"
+                        required>
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label>
+                        Estado
+                    </label>
+
+                    <input
+                        type="text"
+                        placeholder="PR"
+                        maxlength="2"
+                        required>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- PAGAMENTO -->
+
+        <section class="box-checkout">
+
+            <h2>
+                04 — FORMA DE PAGAMENTO
+            </h2>
+
+
+            <div class="pagamentos">
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="pagamento"
+                        required>
+
+                    <span>
+                        PIX
+                    </span>
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="pagamento">
+
+                    <span>
+                        CARTÃO
+                    </span>
+
+                </label>
+
+
+                <label>
+
+                    <input
+                        type="radio"
+                        name="pagamento">
+
+                    <span>
+                        BOLETO
+                    </span>
+
+                </label>
+
+            </div>
+
+        </section>
+
+
+        <!-- FINALIZAR -->
+
+        <section class="box-checkout">
+
+            <button
+                type="submit"
+                class="finalizar">
+
+                FINALIZAR PEDIDO →
+
+            </button>
+
+
+            <p class="aviso">
+
+                ⚠ Esta página é somente uma simulação.
+                Nenhum pagamento será realizado.
+
+            </p>
+
+        </section>
+
+
+    </form>
+
+</section>
+
+
+
+<script>
+
+/* =========================
+   ABRIR CHECKOUT
+========================= */
+
+function comprar(produto, preco) {
+
+    document.getElementById(
+        "produtoEscolhido"
+    ).textContent = produto;
+
+
+    document.getElementById(
+        "precoEscolhido"
+    ).textContent = "R$ " + preco;
+
+
+    document.getElementById(
+        "checkout"
+    ).scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+
+/* =========================
+   FINALIZAR SIMULAÇÃO
+========================= */
+
+function finalizarCompra(event) {
+
+    event.preventDefault();
+
+
+    alert(
+        "PEDIDO SIMULADO!\n\n" +
+
+        "Produto: " +
+        document.getElementById(
+            "produtoEscolhido"
+        ).textContent +
+
+        "\nValor: " +
+
+        document.getElementById(
+            "precoEscolhido"
+        ).textContent +
+
+        "\n\nObrigado por comprar na ZOOMBIES 077!"
+    );
+
+}
+
+</script>
