@@ -1,21 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800&display=swap');
 
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
-    background: #080908;
-    color: #f2f2f2;
+    background: #050705;
+    color: #ffffff;
     font-family: 'Inter', sans-serif;
 }
 
@@ -32,13 +29,13 @@ header {
     align-items: center;
     justify-content: space-between;
 
-    background: #080908;
+    background: #050705;
 
-    border-bottom: 1px solid #252a25;
+    border-bottom: 2px solid #39ff14;
 
     position: sticky;
     top: 0;
-    z-index: 100;
+    z-index: 1000;
 }
 
 
@@ -53,28 +50,24 @@ header {
 
 
 /* =========================
-   LOGO URSO
+   LOGO URSO ZUMBI
 ========================= */
 
 .logo-urso {
-    width: 46px;
-    height: 42px;
-
-    background: #101410;
-
-    border: 2px solid #b6ff00;
-
-    border-radius: 45% 45% 40% 40%;
+    width: 48px;
+    height: 43px;
 
     position: relative;
 
-    transform: rotate(-2deg);
+    background: #111411;
 
-    box-shadow: 3px 3px 0 #b6ff00;
+    border: 2px solid #39ff14;
+
+    border-radius: 45% 45% 38% 38%;
+
+    box-shadow: 4px 4px 0 #39ff14;
 }
 
-
-/* ORELHAS */
 
 .logo-urso::before,
 .logo-urso::after {
@@ -82,16 +75,16 @@ header {
 
     position: absolute;
 
-    width: 15px;
-    height: 15px;
+    width: 17px;
+    height: 17px;
 
-    background: #101410;
+    background: #111411;
 
-    border: 2px solid #b6ff00;
+    border: 2px solid #39ff14;
 
     border-radius: 50%;
 
-    top: -8px;
+    top: -9px;
 }
 
 
@@ -105,47 +98,42 @@ header {
 }
 
 
-/* OLHOS */
-
 .olho {
     position: absolute;
 
-    width: 6px;
-    height: 9px;
+    width: 7px;
+    height: 10px;
 
-    background: #b6ff00;
+    background: #39ff14;
 
     top: 14px;
-
-    transform: rotate(-20deg);
 }
 
 
 .olho1 {
     left: 11px;
+
+    transform: rotate(-15deg);
 }
 
 
 .olho2 {
     right: 11px;
-    transform: rotate(20deg);
+
+    transform: rotate(15deg);
 }
 
-
-/* BOCA */
 
 .boca {
     position: absolute;
 
-    width: 24px;
-    height: 8px;
+    width: 27px;
+    height: 9px;
 
-    border-bottom: 3px solid #b6ff00;
+    left: 8px;
+    bottom: 8px;
 
-    left: 9px;
-    bottom: 9px;
-
-    transform: rotate(-4deg);
+    border-bottom: 3px solid #39ff14;
 }
 
 
@@ -159,7 +147,7 @@ header {
 
 
 .logo-texto span {
-    color: #b6ff00;
+    color: #39ff14;
 }
 
 
@@ -169,16 +157,18 @@ header {
 
 nav {
     display: flex;
+
     gap: 30px;
 }
 
 
 nav a {
-    color: #ddd;
+    color: #ffffff;
 
     text-decoration: none;
 
     font-size: 12px;
+
     font-weight: 800;
 
     text-transform: uppercase;
@@ -188,7 +178,7 @@ nav a {
 
 
 nav a:hover {
-    color: #b6ff00;
+    color: #39ff14;
 }
 
 
@@ -210,10 +200,11 @@ nav a:hover {
     gap: 70px;
 
     background:
-        radial-gradient(
-            circle at 80% 40%,
-            rgba(182,255,0,.10),
-            transparent 30%
+        linear-gradient(
+            135deg,
+            #050705 0%,
+            #050705 60%,
+            #102b0b 100%
         );
 }
 
@@ -224,11 +215,11 @@ nav a:hover {
 
 
 .mini-titulo {
-    color: #b6ff00;
+    color: #39ff14;
 
     font-size: 11px;
 
-    font-weight: 800;
+    font-weight: 900;
 
     letter-spacing: 4px;
 
@@ -250,7 +241,7 @@ nav a:hover {
 .hero h1 span {
     color: transparent;
 
-    -webkit-text-stroke: 2px #b6ff00;
+    -webkit-text-stroke: 3px #39ff14;
 }
 
 
@@ -259,7 +250,7 @@ nav a:hover {
 
     margin: 35px 0;
 
-    color: #aaa;
+    color: #a5aaa5;
 
     line-height: 1.7;
 
@@ -268,7 +259,7 @@ nav a:hover {
 
 
 /* =========================
-   BOTÕES
+   BOTÃO
 ========================= */
 
 .botao {
@@ -276,11 +267,11 @@ nav a:hover {
 
     padding: 16px 25px;
 
-    background: #b6ff00;
+    background: #39ff14;
 
-    color: #080908;
+    color: #050705;
 
-    border: 2px solid #b6ff00;
+    border: 2px solid #39ff14;
 
     text-decoration: none;
 
@@ -293,16 +284,14 @@ nav a:hover {
 
 
 .botao:hover {
-    background: transparent;
+    background: #050705;
 
-    color: #b6ff00;
-
-    transform: translateY(-3px);
+    color: #39ff14;
 }
 
 
 /* =========================
-   DESENHO HERO
+   HERO VERDE
 ========================= */
 
 .hero-desenho {
@@ -311,9 +300,9 @@ nav a:hover {
 
     min-width: 360px;
 
-    background: #b6ff00;
+    background: #39ff14;
 
-    border: 3px solid #080908;
+    border: 4px solid #ffffff;
 
     position: relative;
 
@@ -323,9 +312,11 @@ nav a:hover {
 
     justify-content: center;
 
-    transform: rotate(5deg);
+    transform: rotate(4deg);
 
-    box-shadow: 16px 16px 0 #252a25;
+    box-shadow:
+        15px 15px 0 #ffffff,
+        25px 25px 0 #39ff14;
 }
 
 
@@ -334,9 +325,7 @@ nav a:hover {
 
     font-size: 180px;
 
-    color: #080908;
-
-    transform: rotate(-5deg);
+    color: #050705;
 }
 
 
@@ -348,11 +337,11 @@ nav a:hover {
 
     padding: 10px;
 
-    background: #080908;
+    background: #050705;
 
-    color: #b6ff00;
+    color: #39ff14;
 
-    border: 2px solid #b6ff00;
+    border: 2px solid #39ff14;
 
     font-size: 11px;
 
@@ -372,7 +361,7 @@ nav a:hover {
 
     font-size: 55px;
 
-    color: #080908;
+    color: #050705;
 
     transform: rotate(-15deg);
 }
@@ -385,9 +374,9 @@ nav a:hover {
 .produtos {
     padding: 100px 8%;
 
-    border-top: 1px solid #252a25;
+    background: #090d09;
 
-    background: #0c0f0c;
+    border-top: 3px solid #39ff14;
 }
 
 
@@ -397,11 +386,11 @@ nav a:hover {
 
 
 .titulo-secao p {
-    color: #b6ff00;
+    color: #39ff14;
 
     font-size: 11px;
 
-    font-weight: 800;
+    font-weight: 900;
 
     letter-spacing: 4px;
 }
@@ -434,9 +423,9 @@ nav a:hover {
 ========================= */
 
 .produto {
-    background: #111411;
+    background: #0d120d;
 
-    border: 1px solid #303630;
+    border: 2px solid #202820;
 
     overflow: hidden;
 
@@ -447,9 +436,9 @@ nav a:hover {
 .produto:hover {
     transform: translateY(-8px);
 
-    border-color: #b6ff00;
+    border-color: #39ff14;
 
-    box-shadow: 7px 7px 0 #b6ff00;
+    box-shadow: 8px 8px 0 #39ff14;
 }
 
 
@@ -462,13 +451,13 @@ nav a:hover {
 
     height: 330px;
 
-    background: #191d19;
+    background: #111;
 
     position: relative;
 
     overflow: hidden;
 
-    border-bottom: 1px solid #303630;
+    border-bottom: 2px solid #202820;
 }
 
 
@@ -484,7 +473,7 @@ nav a:hover {
 }
 
 
-.produto:hover img {
+.produto:hover .imagem-produto img {
     transform: scale(1.07);
 }
 
@@ -495,9 +484,9 @@ nav a:hover {
     top: 12px;
     left: 12px;
 
-    background: #b6ff00;
+    background: #39ff14;
 
-    color: #080908;
+    color: #050705;
 
     padding: 7px 10px;
 
@@ -508,7 +497,7 @@ nav a:hover {
 
 
 /* =========================
-   INFO
+   INFORMAÇÕES
 ========================= */
 
 .info {
@@ -524,7 +513,7 @@ nav a:hover {
 
 
 .info p {
-    color: #858985;
+    color: #858b85;
 
     font-size: 12px;
 }
@@ -546,7 +535,7 @@ nav a:hover {
 
 
 .preco strong {
-    color: #fff;
+    color: #39ff14;
 
     font-size: 17px;
 }
@@ -555,11 +544,11 @@ nav a:hover {
 .comprar {
     display: inline-block;
 
-    padding: 9px 13px;
+    padding: 10px 14px;
 
-    background: #b6ff00;
+    background: #39ff14;
 
-    color: #080908;
+    color: #050705;
 
     text-decoration: none;
 
@@ -573,8 +562,6 @@ nav a:hover {
 
 .comprar:hover {
     background: white;
-
-    transform: scale(1.05);
 }
 
 
@@ -585,7 +572,7 @@ nav a:hover {
 .sobre {
     padding: 110px 8%;
 
-    background: #080908;
+    background: #050705;
 
     display: grid;
 
@@ -594,6 +581,8 @@ nav a:hover {
     gap: 100px;
 
     align-items: center;
+
+    border-top: 1px solid #202820;
 }
 
 
@@ -610,7 +599,7 @@ nav a:hover {
 .sobre > p {
     max-width: 500px;
 
-    color: #aaa;
+    color: #999;
 
     font-size: 16px;
 
@@ -625,16 +614,16 @@ nav a:hover {
 .contato {
     padding: 110px 8%;
 
-    background: #b6ff00;
+    background: #39ff14;
 
-    color: #080908;
+    color: #050705;
 
     text-align: center;
 }
 
 
 .contato .mini-titulo {
-    color: #080908;
+    color: #050705;
 }
 
 
@@ -644,20 +633,20 @@ nav a:hover {
 
 
 .botao-instagram {
-    background: #080908;
+    background: #050705;
 
-    color: #b6ff00;
+    color: #39ff14;
 
-    border-color: #080908;
+    border-color: #050705;
 }
 
 
 .botao-instagram:hover {
-    background: transparent;
+    background: white;
 
-    color: #080908;
+    color: #050705;
 
-    border-color: #080908;
+    border-color: white;
 }
 
 
@@ -668,9 +657,9 @@ nav a:hover {
 footer {
     padding: 50px 8%;
 
-    background: #050605;
+    background: #020302;
 
-    border-top: 1px solid #252a25;
+    border-top: 3px solid #39ff14;
 
     display: flex;
 
@@ -693,6 +682,7 @@ footer {
 
 .logo-urso.pequeno {
     width: 38px;
+
     height: 35px;
 
     box-shadow: none;
@@ -700,24 +690,269 @@ footer {
 
 
 footer p {
-    color: #888;
+    color: #777;
 
     font-size: 12px;
 }
 
 
 footer a {
-    color: #b6ff00;
+    color: #39ff14;
 
     text-decoration: none;
 
-    font-weight: 800;
+    font-weight: 900;
 
     font-size: 12px;
 }
 
 
 footer small {
+    color: #444;
+
+    font-size: 10px;
+}
+
+
+/* =========================
+   PÁGINA DE COMPRA
+========================= */
+
+.pagina-compra {
+    min-height: 100vh;
+
+    background: #050705;
+}
+
+
+.voltar {
+    color: #39ff14;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 900;
+}
+
+
+.checkout {
+    width: min(900px, 90%);
+
+    margin: auto;
+
+    padding: 80px 0;
+}
+
+
+.checkout-top {
+    margin-bottom: 50px;
+}
+
+
+.checkout-top h1 {
+    font-family: 'Anton', sans-serif;
+
+    font-size: clamp(60px, 9vw, 110px);
+
+    line-height: .85;
+}
+
+
+.checkout-top h1 span {
+    color: transparent;
+
+    -webkit-text-stroke: 2px #39ff14;
+}
+
+
+.formulario {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+.box-checkout {
+    background: #0d120d;
+
+    border: 1px solid #303630;
+
+    padding: 30px;
+}
+
+
+.box-checkout h2 {
+    color: #39ff14;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+
+.produto-escolhido {
+    padding: 20px;
+
+    border: 1px solid #303630;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.produto-escolhido p {
+    color: #777;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+}
+
+
+#preco {
+    color: #39ff14;
+}
+
+
+.campo {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 8px;
+
+    margin-bottom: 18px;
+}
+
+
+.campo label {
+    color: #aaa;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+
+.campo input {
+    width: 100%;
+
+    padding: 15px;
+
+    background: #050705;
+
+    color: white;
+
+    border: 1px solid #303630;
+
+    outline: none;
+
+    font-family: 'Inter', sans-serif;
+}
+
+
+.campo input:focus {
+    border-color: #39ff14;
+}
+
+
+.duas-colunas {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 20px;
+}
+
+
+.pagamentos {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 12px;
+}
+
+
+.pagamentos label {
+    cursor: pointer;
+}
+
+
+.pagamentos input {
+    display: none;
+}
+
+
+.pagamentos span {
+    display: block;
+
+    padding: 18px;
+
+    text-align: center;
+
+    border: 1px solid #303630;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    font-weight: 900;
+
+    transition: .2s;
+}
+
+
+.pagamentos input:checked + span {
+    background: #39ff14;
+
+    color: #050705;
+
+    border-color: #39ff14;
+}
+
+
+.finalizar {
+    width: 100%;
+
+    padding: 20px;
+
+    border: 2px solid #39ff14;
+
+    background: #39ff14;
+
+    color: #050705;
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    transition: .2s;
+}
+
+
+.finalizar:hover {
+    background: transparent;
+
+    color: #39ff14;
+}
+
+
+.aviso {
+    text-align: center;
+
     color: #555;
 
     font-size: 10px;
@@ -747,7 +982,6 @@ footer small {
     .numero {
         font-size: 140px;
     }
-
 }
 
 
@@ -861,6 +1095,30 @@ footer small {
         flex-direction: column;
 
         text-align: center;
+    }
+
+
+    .duas-colunas {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+
+    .pagamentos {
+        grid-template-columns: 1fr;
+    }
+
+
+    .checkout {
+        width: 90%;
+
+        padding: 50px 0;
+    }
+
+
+    .box-checkout {
+        padding: 20px;
     }
 
 }
